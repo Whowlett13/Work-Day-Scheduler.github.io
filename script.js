@@ -13,18 +13,18 @@ $(document).ready(function () {
     var time = $(this).parent().attr("id");
 
     console.log(text, time);
-    
+
     localStorage.setItem(time, text);
   })
 
   function timeTracker() {
-    var timeNow = moment().hour();
+    var timeNow = $('time-block').text(dayjs().format(H));
 
-    $('#currentDay').text(dayjs().format('MMM D, YYYY'));
+    
 
-    $(".time-block").each(function () {
+    $('.time-block').each(function (event) {
       
-      var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+      $('.time-block') = parseInt($(this).attr("time-block").split("hour")[1]);
 
       if (blockTime < timeNow) {
         $(this).removeClass("future");
@@ -44,6 +44,8 @@ $(document).ready(function () {
       }
       colorChange();
       renderText();
+      event.preventDefault();
+      
     })
 
 

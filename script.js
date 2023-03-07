@@ -2,41 +2,6 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $('#currentDay').text(dayjs().format('MMM D, YYYY'));
-// var today = dayjs();
-// $('currentDay').text(today.format('MMM D, YYYY'));
-
-// function timeTracker() {
-//   var timeNow = dayjs().format('H');
-
-
-
-//   $('.time-block').each(function (event) {
-
-//     $('.time-block') = parseInt($(this).attr("#time-block").split("-")[1]);
-
-
-//     if (blockTime < timeNow) {
-//       $(this).removeClass("future");
-//       $(this).removeClass("present");
-//       $(this).addClass("past");
-//     }
-//     else if (blockTime === timeNow) {
-//       $(this).removeClass("past");
-//       $(this).removeClass("future");
-//       $(this).addClass("present");
-//     }
-//     else {
-//       $(this).removeClass("present");
-//       $(this).removeClass("past");
-//       $(this).addClass("future");
-
-//     }
-//     // colorChange();
-//     // renderText();
-//     // $('event').preventDefault();
-
-//   })
-
 
 
 $(document).ready(function () {
@@ -57,7 +22,6 @@ $(document).ready(function () {
 
     $('.time-block').each(function (event) {
 
-      // $('.time-block') = parseInt($(this).attr("#time-block").split("-")[1]);
 
       var blockTime = parseInt($(this).attr("id").split("-")[1]);
 
@@ -78,9 +42,6 @@ $(document).ready(function () {
         $(this).addClass("future");
 
       }
-      // colorChange();
-      // renderText();
-      // $('event').preventDefault();
 
     });
   };

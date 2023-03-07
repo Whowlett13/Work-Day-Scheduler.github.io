@@ -57,7 +57,9 @@ $(document).ready(function () {
 
     $('.time-block').each(function (event) {
 
-      $('.time-block') = parseInt($(this).attr("#time-block").split("-")[1]);
+      // $('.time-block') = parseInt($(this).attr("#time-block").split("-")[1]);
+
+      var blockTime = parseInt($(this).attr("id").split("-")[1]);
 
 
       if (blockTime < timeNow) {
@@ -65,7 +67,7 @@ $(document).ready(function () {
         $(this).removeClass("present");
         $(this).addClass("past");
       }
-      else if (blockTime === timeNow) {
+      else if (blockTime == timeNow) {
         $(this).removeClass("past");
         $(this).removeClass("future");
         $(this).addClass("present");
@@ -121,9 +123,7 @@ $(document).ready(function () {
   $("hour16 .description").val(localStorage.getItem("hour16"));
   $("#hour17 .description").val(localStorage.getItem("hour17"));
 
-  $('hour8 .description').
 
-
-    timeTracker();
+  timeTracker();
 
 });

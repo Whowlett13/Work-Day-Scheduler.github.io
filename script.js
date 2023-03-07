@@ -12,6 +12,8 @@ $(document).ready(function () {
     var text = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
 
+    console.log(text, time);
+    
     localStorage.setItem(time, text);
   })
 
@@ -21,6 +23,7 @@ $(document).ready(function () {
     $('#currentDay').text(dayjs().format('MMM D, YYYY'));
 
     $(".time-block").each(function () {
+      
       var blockTime = parseInt($(this).attr("id").split("hour")[1]);
 
       if (blockTime < timeNow) {

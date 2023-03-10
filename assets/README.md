@@ -20,8 +20,7 @@ link:  https://whowlett13.github.io/Work-Day-Scheduler.github.io/
 
 ## ScreenShot of Deployed Application:
 
-
-
+Link: https://github.com/Whowlett13/Work-Day-Scheduler.github.io/issues/1#issue-1618273984
 
 ## Built With:
 -HTML
